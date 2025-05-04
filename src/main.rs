@@ -1,4 +1,31 @@
+// ref https://www.youtube.com/watch?v=rQ_J9WH6CGk
 fn main() {
+    variable_declaration();
+
+    let result = calculate_area(5.0);
+    println!("Area of circle with radius 5.0: {}", result);
+
+    let total = {
+        let price = 5;
+        let qty = 10;
+        price * qty
+    };
+    println!("Total: {}", total);
+
+    let sum = add(5, 10);
+    println!("Sum of 5 and 10: {}", sum);
+}
+
+fn calculate_area(radius: f64) -> f64 {
+    const PI: f64 = 3.14159;
+    PI * radius * radius
+}
+
+fn add(x: i32, y: i32) -> i32 {
+    x + y
+}
+
+fn variable_declaration() {
     println!("Hello, world!");
 
     let x: i32 = -42;
@@ -55,5 +82,4 @@ fn main() {
     
     let constant_var: i32 = 100;
     println!("Constant Variable: {}", constant_var);
-    
 }
